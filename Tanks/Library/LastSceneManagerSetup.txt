@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/joseph.paolini/Desktop/TANKGAMES/Tank-master/Tank-master/Assets/Scenes/Main.unity
+  isLoaded: 1
+  isActive: 1
