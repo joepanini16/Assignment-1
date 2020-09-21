@@ -6,13 +6,18 @@ using UnityEngine.UI;
 public class titlepagemanager : MonoBehaviour
 {
 
-    public GameObject player;
+    
     public GameObject tittlepage;
     public GameObject cursor;
     public GameObject[] curserposition;
     public GameObject playerSelectIndicator;
     public Text thisText;
-    public GameObject levelone;
+    public GameObject gamearea;
+    public GameObject playeronespawn;
+    public GameObject playerper;
+    
+    public Camera gamecamera;
+    public Camera maincamera;
 
     private bool ongamestartselection;
 
@@ -53,10 +58,14 @@ public class titlepagemanager : MonoBehaviour
             if (ongamestartselection == true)
             {
                 
-                player.SetActive(true);
-                levelone.SetActive(true);
+                
+                gamearea.SetActive(true);
                 tittlepage.SetActive(false);
 
+                maincamera.enabled = false;
+                gamecamera.enabled = true;
+
+                Instantiate(playerper, playeronespawn.transform.position, Quaternion.identity);
             }
             if (ongamestartselection == false)
             {
